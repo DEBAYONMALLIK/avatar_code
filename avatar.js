@@ -64,4 +64,3 @@ app.get('/avatar/:seed', (req, res) => {
 app.listen(port, () => {
     console.log(`🎨 Avatar API listening at http://localhost:${port}`);
 });
-
