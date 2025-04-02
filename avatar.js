@@ -3,7 +3,7 @@ import { createAvatar } from '@dicebear/core';
 import { openPeeps } from '@dicebear/collection';
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT||3000;
 
 app.get('/avatar/:seed', (req, res) => {
     const { seed } = req.params;
@@ -64,3 +64,4 @@ app.get('/avatar/:seed', (req, res) => {
 app.listen(port, () => {
     console.log(`🎨 Avatar API listening at http://localhost:${port}`);
 });
+
